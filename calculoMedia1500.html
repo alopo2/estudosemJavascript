@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula a Média</title>
+</head>
+<body>
+
+    <script>
+
+        function pulaLinha(){
+            document.write('<br>');
+        }
+
+        function mostra(mensagem){
+            document.write(mensagem);
+            pulaLinha();
+        }
+
+        let anoBrasil = 1500;
+        let anoAtual = 2022;
+        let totalAno = anoAtual - anoBrasil;
+        let idadeBase = 28;
+        let resultado = totalAno/28;
+
+        mostra(`A quantidade de gerações foi: ${resultado}`);
+    </script>
+    
+</body>
+</html>

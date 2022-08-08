@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitórias e Empates Time</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+        //Função criada para pular duas linhas.
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        //Função criada para receber uma frase e mostrá-la no HTML
+
+        let nome = prompt("Digite o seu nome: ")
+        //Exibe o prompt no navegador, e guarda o valor na variável nome.
+        let vitorias = parseInt(prompt("Digite o numero de vitórias: ")); 
+        //Recebe o valor digitado, joga na variável vitorias, e converte em número.
+        let empates = parseInt(prompt("Digite o numero de empates: "));
+        //Recebe o valor digitado, joga na variável empate, e converte em número.
+        let pontos = (vitorias * 3) + empates;
+        //Recebe o cálculo feito entre as variáveis vitórias e empates
+
+        mostra(`${nome}, o total de pontos do seu time é: ${pontos}`);
+        //chama a função mostra, concatena a string entre `` com a variável pontos.
+
+    </script>
+</body>
+</html>

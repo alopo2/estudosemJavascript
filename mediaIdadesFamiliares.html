@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Idades Familiares</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+        //Função criada para pular duas linhas.
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        //Função criada para receber uma frase e mostrá-la no HTML
+
+        let totalFamiliares = parseInt(prompt("Digite a quantidade de familiares: "));
+        //Variável criada para receber a quantidade de familiares a serem digitados pelo usuário.
+        let incremento = 1;
+        //Variável de controle, criada para ser incrementada dentro do while.
+        let totalIdades = 0;
+        //Variável de controle, criada para ser incrementada a partir de idade. Sendo inicializada em 0.
+        while(incremento <= totalFamiliares){
+            //Laço de repetição, que vai rodar até que totalFamiliares for menor ou igual a variável incremento.
+            let idade = parseInt(prompt("Digite a idade do familiar: "));
+            //Variável que irá armazenar os valores de idades digitados pelo usuário.
+            totalIdades = totalIdades + idade;
+            //A variável totalIdades na primeira passada, irá valer zero, e será adicionada a ela o valor da variável idade + 0 que é o valor da variável totalIdades.
+            incremento++;
+            //Incremento na primeira rodada, irá valer 1, depois que rodar, irá valer 2 e assim por diante.
+            //A mesma coisa que dizer: incremento = incremento + 1
+        }
+
+        let mediaIdadesFamiliares = totalIdades/totalFamiliares;
+        //Variável que receberá os valores de totalIdades dividido pelo totalFamiliares, e será chamada depois para mostrar a média de idades dos familiares.
+
+        mostra(`A média das idades dos familiares é: ${mediaIdadesFamiliares}`);
+        //Função que é chamada para mostrar a mensagem + o total da media de idades.
+        mostra("FIM")
+        
+    </script>
+</body>
+</html>

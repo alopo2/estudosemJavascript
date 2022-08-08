@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula IMC</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function calculaImc(peso,altura){
+            return peso / (altura*altura);
+            
+        }
+
+        let nome = prompt("Digite o seu nome: ");
+        let pesoInformado = prompt("Digite o seu peso: ");
+        let alturaInformada = prompt("Digite a sua altura: ");
+        let imc = calculaImc(pesoInformado, alturaInformada);
+        
+        
+        if(imc <= 18.5){
+            mostra(`${nome}, o seu IMC é: ${Math.round(imc)}, você está abaixo do peso ideal.`);
+        } else if(imc >= 25 && imc < 30){
+            mostra(`${nome}, o seu IMC é: ${Math.round(imc)}, você está com sobrepreso.`);
+        }else if (imc >= 30){
+            mostra(`${nome}, o seu IMC é: ${Math.round(imc)}, você está acima do peso ideal.`);
+        } else if (imc > 18.5 || imc < 25){
+            mostra(`${nome}, o seu IMC é: ${Math.round(imc)}, você está no peso ideal.`);
+        }
+
+    </script>
+</body>
+</html>

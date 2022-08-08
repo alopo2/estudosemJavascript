@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula as Idades</title>
+</head>
+<body>
+
+    <script>
+        let idadeLinda = 12;
+        let idadeGuaracira = 15;
+        let idadePerola = 13;
+        let media = (idadeLinda + idadeGuaracira + idadePerola)/3;
+        let nome = ['Linda','Guaracira','Perola'];
+
+        document.write(`A idade de ${nome[0]} é ${idadeLinda} anos, sua irmã ${nome[1]} tem ${idadeGuaracira} anos e ${nome[2]} tem ${idadePerola} anos.`);
+        document.write(`<br> A média de idade entre elas é de: ${Math.round(media)} anos`);
+    </script>
+</body>
+</html>

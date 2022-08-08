@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros Pares 1 a 100</title>
+</head>
+<body>
+    <script>
+        function pulaLinha(){
+            document.write("<br>");
+            document.write("<br>");
+        }
+        //Função criada para pular duas linhas.
+
+        function mostra(frase){
+            document.write(frase);
+            pulaLinha();
+        }
+        //Função criada para mostrar a mensagem na tela e pular duas linhas.
+        //Função aninhada com pulaLinha.
+
+        let contador = 2
+        //Contador iniciando em 2
+
+        while(contador <= 100){
+            //Laço de repetição que vai até 100, incrementando 2 em 2
+            mostra(`Os números pares de 1 a 100: ${contador}`);
+            //Função mostra que apresentará os números pares até 100
+            contador = contador + 2
+            //Incrementa 2 em 2 até que seja menor ou igual a 100, seguindo a condicional do while.
+        }
+        mostra("FIM")
+    </script>
+</body>
+</html>
